@@ -16,35 +16,6 @@ local UICorner_4 = Instance.new("UICorner")
 
 --Properties:
 local Lib = {}
-
-function Lib:CreateMain()
-	ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-	ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-	
-	Frame.Parent = ScreenGui
-	Frame.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
-	Frame.BorderSizePixel = 0
-	Frame.Position = UDim2.new(0.350381672, 0, 0.190476179, 0)
-	Frame.Size = UDim2.new(0, 500, 0, 360)
-
-	UICorner.CornerRadius = UDim.new(0.0299999993, 10)
-	UICorner.Parent = Frame
-
-	ButtonMenu.Name = "ButtonMenu"
-	ButtonMenu.Parent = ScreenGui
-	ButtonMenu.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
-	ButtonMenu.BorderSizePixel = 0
-	ButtonMenu.Position = UDim2.new(0.357977152, 0, 0.275297612, 0)
-	ButtonMenu.Size = UDim2.new(0, 480, 0, 294)
-
-	UICorner_3.CornerRadius = UDim.new(0.0299999993, 10)
-	UICorner_3.Parent = ButtonMenu
-
-	UIListLayout.Parent = ButtonMenu
-	UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-	UIListLayout.Padding = UDim.new(0.0175000001, 5)
-end
-
 function Lib:DraggingEnabled(frame, parent)
 
 	parent = parent or frame
@@ -81,6 +52,33 @@ function Lib:DraggingEnabled(frame, parent)
 	end)
 end
 
+function Lib:CreateMain()
+	ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+	ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	
+	Frame.Parent = ScreenGui
+	Frame.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+	Frame.BorderSizePixel = 0
+	Frame.Position = UDim2.new(0.350381672, 0, 0.190476179, 0)
+	Frame.Size = UDim2.new(0, 500, 0, 360)
+
+	UICorner.CornerRadius = UDim.new(0.0299999993, 10)
+	UICorner.Parent = Frame
+
+	ButtonMenu.Name = "ButtonMenu"
+	ButtonMenu.Parent = ScreenGui
+	ButtonMenu.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
+	ButtonMenu.BorderSizePixel = 0
+	ButtonMenu.Position = UDim2.new(0.357977152, 0, 0.275297612, 0)
+	ButtonMenu.Size = UDim2.new(0, 480, 0, 294)
+
+	UICorner_3.CornerRadius = UDim.new(0.0299999993, 10)
+	UICorner_3.Parent = ButtonMenu
+
+	UIListLayout.Parent = ButtonMenu
+	UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+	UIListLayout.Padding = UDim.new(0.0175000001, 5)
+end
 
 local Ob = {}
 
