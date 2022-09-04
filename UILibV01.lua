@@ -50,7 +50,7 @@ function Lib:DraggingEnabled(frame, parent)
 			parent.Position  = UDim2.new(framePos.X.Scale, framePos.X.Offset + delta.X, framePos.Y.Scale, framePos.Y.Offset + delta.Y)
 		end
 	end)
-end
+
 
 function Lib:CreateMain()
 	ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -96,6 +96,8 @@ TextButton.TextWrapped = true
 
 UICorner_4.CornerRadius = UDim.new(0.100000001, 8)
 	UICorner_4.Parent = TextButton
+	end
+	return Ob;
 end
 
 local UIName = {}
@@ -116,3 +118,6 @@ function UIName:UIName(name)
 	UICorner_2.CornerRadius = UDim.new(0.0299999993, 10)
 	UICorner_2.Parent = TextLabel
 end
+return UIName;
+end
+return Lib;
